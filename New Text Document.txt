@@ -1,1 +1,186 @@
 git add --all && git commit -m "save" && git pull origin master && git push origin master
+
+================================sticky header=============================================
+
+var a=$('.nav').offset().top;
+$(window).scroll(function()
+{
+	var scrollTop = $(window).scrollTop();
+	if (scrollTop > a) 
+	{
+    $('.nav').addClass('sticky');
+     $('.scroll-top').addClass('active');
+    } 
+    else
+    {
+    $('.nav').removeClass('sticky');
+    $('.scroll-top').removeClass('active');
+    }
+    
+});
+
+$('.scroll-top').click(function()
+    {
+    	$(window).scrollTop(0);
+    	
+    }
+);
+
+
+
+============================csss=====================================
+/*
+ Table Of Contents
+
+ 1.) Homepage
+ 2.) About Us
+ 3.) Contact Us
+ ===============================================*/
+
+/*
+ 1.) Homepage
+ ----------------------------------------*/
+/*
+ 2.) About Us
+ ----------------------------------------*/
+/*
+ 3.) Contact Us
+ ----------------------------------------*/
+body
+{
+	padding-bottom:42.5px;
+}
+#header 
+{
+	text-align:center;
+	padding-bottom:50px;
+}
+nav ul
+{
+	text-align:center;
+	padding:10px 0;
+	background:red;
+	
+}
+nav ul li
+{
+	display:inline-block;
+	font-size:15px;
+	padding:0 10px;
+	
+}
+#content ul li img
+{
+	display:block;
+}
+.sticky 
+{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+#footer ul
+{
+	text-align:center;
+	padding:10px 0;
+	background:yellow;
+	
+}
+#footer ul li
+{
+	display:inline-block;
+	font-size:15px;
+	padding:0 10px;
+	
+}
+.sticky-footer
+{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+.scroll-top 
+{
+	font-size:15px;
+	text-align:center;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background-color:black;
+	  position:fixed;
+	right:0;
+	bottom:0;
+	display:none;
+}
+.scroll-top.active
+{
+	display:block;
+}
+
+
+=================================html============================
+<header id="header">
+				
+                <img src="assets/images/gallary.png">
+				
+			</header>
+			<nav class="nav">
+				<ul>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+					<li>
+						<a href="">
+							hello
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+
+
+<footer id="footer" class="sticky-footer">
+				<ul>
+					<li><a href="">footer</a></li>
+					<li><a href="">footer</a></li>
+					<li><a href="">footer</a></li>
+					<li><a href="">footer</a></li>
+					<li><a href="">footer</a></li>
+				</ul>
+			</footer>
+
+
+
+
+
+================================sticky header end=============================================
